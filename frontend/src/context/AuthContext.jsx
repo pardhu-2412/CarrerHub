@@ -9,7 +9,7 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   // Set base backend URL
-  const API_URL = 'http://localhost:8080/api';
+  const API_URL = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     // Check if token and user info are saved in localStorage
